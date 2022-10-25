@@ -1,0 +1,167 @@
+const gestures = {
+    hornGesture: {
+        "name": "horns",
+        "algorithm": "fingerpose",
+        "models": "hands",
+        "confidence": 7.5,
+        "description": [
+          [
+            "addCurl",
+            "Thumb",
+            "NoCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Thumb",
+            "DiagonalUpRight",
+            1
+          ],
+          [
+            "addCurl",
+            "Index",
+            "NoCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Index",
+            "VerticalUp",
+            1
+          ],
+          [
+            "addCurl",
+            "Middle",
+            "FullCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Middle",
+            "VerticalUp",
+            1
+          ],
+          [
+            "addDirection",
+            "Middle",
+            "DiagonalUpRight",
+            0.034482758620689655
+          ],
+          [
+            "addCurl",
+            "Ring",
+            "FullCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Ring",
+            "VerticalUp",
+            1
+          ],
+          [
+            "addCurl",
+            "Pinky",
+            "NoCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Pinky",
+            "VerticalUp",
+            1
+          ],
+          [
+            "setWeight",
+            "Index",
+            2
+          ],
+          [
+            "setWeight",
+            "Ring",
+            2
+          ]
+        ],
+        "enabled": true
+      },
+    thumbsupGesture: {
+        "name": "thumbsup",
+        "algorithm": "fingerpose",
+        "models": "hands",
+        "confidence": 7.5,
+        "description": [
+          [
+            "addCurl",
+            "Thumb",
+            "NoCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Thumb",
+            "DiagonalUpLeft",
+            1
+          ],
+          [
+            "addCurl",
+            "Index",
+            "FullCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Index",
+            "DiagonalUpLeft",
+            1
+          ],
+          [
+            "addCurl",
+            "Middle",
+            "FullCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Middle",
+            "DiagonalUpLeft",
+            1
+          ],
+          [
+            "addDirection",
+            "Middle",
+            "HorizontalLeft",
+            0.1111111111111111
+          ],
+          [
+            "addCurl",
+            "Ring",
+            "FullCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Ring",
+            "HorizontalLeft",
+            1
+          ],
+          [
+            "addCurl",
+            "Pinky",
+            "FullCurl",
+            1
+          ],
+          [
+            "addDirection",
+            "Pinky",
+            "HorizontalLeft",
+            1
+          ],
+          [
+            "setWeight",
+            "Thumb",
+            2
+          ]
+        ],
+        "enabled": true
+      }
+}
