@@ -10,10 +10,12 @@ let initImage = {
 let imgList = [];
 
 function preload() {
-  srcThumbsUp = loadImage("polisha.gif");
-  srcHorns = loadImage("horns.gif")
-  imgList.push(getImageWithSource(srcThumbsUp), getImageWithSource(srcHorns));
-  console.log(imgList)
+  srcThumbsUp = loadImage("images/ok.png");
+  srcHorns = loadImage("images/horns.png")
+  srcOk = loadImage("images/perfecto.png")
+  srcStop = loadImage("images/adios.png")
+  imgList.push(getImageWithSource(srcThumbsUp), getImageWithSource(srcHorns), getImageWithSource(srcOk),
+  getImageWithSource(srcStop));
 }
 
 /**
@@ -21,13 +23,15 @@ function preload() {
  * - Configure handsfree (set which models, plugins, and gestures you want to use)
  */
 function setup () {
-  createCanvas(640, 480)
+  createCanvas(1000, 680)
   handsfree = new Handsfree({
     //showDebug: true, // Comment this out to hide the default webcam feed with landmarks
     hands: true
   })
   handsfree.useGesture(gestures.hornGesture)
   handsfree.useGesture(gestures.thumbsupGesture)
+  handsfree.useGesture(gestures.stopGesture)
+  handsfree.useGesture(gestures.okGesture)
   handsfree.enableGestures();
   // Create start model button
   buttonStart = createButton('Start Model')
@@ -43,7 +47,7 @@ function setup () {
 
 
 function draw () {
-  background(0)
+  background(0,255,0)
   tint(255)
   //Draw and flip the video
   push();
@@ -74,6 +78,12 @@ function fillImageFadeByLabel(label) {
       break;
     case "horns":
       imgList[1].fade = 255;
+      break;
+    case "ok":
+      imgList[2].fade = 255;
+      break;
+    case "stop":
+      imgList[3].fade = 255;
       break;
     default:
       break;    
