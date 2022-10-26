@@ -3,10 +3,6 @@ let video;
 // To store the classification
 let label = "";
 // To store the images to show
-let initImage = {
-  src: null,
-  fade: 0
-};
 let imgList = [];
 
 function preload() {
@@ -66,7 +62,7 @@ function draw () {
 
 function getImageWithSource(source) {
   return {
-    ...initImage,
+    fade: 0,
     src: source
   }
 }
