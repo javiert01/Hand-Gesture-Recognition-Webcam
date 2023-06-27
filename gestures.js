@@ -1,3 +1,5 @@
+/** This file contains the object that describes the gestures that our model uses. 
+ * To generate the object go to https://handsfreejs.netlify.app/gesture/ */
 const gestures = {
     hornGesture: {
         "name": "horns",
